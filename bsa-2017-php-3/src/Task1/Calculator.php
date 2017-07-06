@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace BinaryStudioAcademy\Task1;
 
@@ -21,15 +21,11 @@ class Calculator
 
     public function divide(int $a, int $b) : int
     {
-        if($b == 0) {
-            throw new \DivisionByZeroError();
-        }
-
-        return $a / $b;
+        return intdiv($a, $b);
     }
 
     public function pow2(int $n) : int
     {
-        return pow(2, $n);
+        return 2 ** $n;
     }
 }
